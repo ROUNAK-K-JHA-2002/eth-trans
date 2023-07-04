@@ -35,6 +35,8 @@ contract Transactions{
     // push transferobject to array
     transactions.push(TransferStruct(msg.sender,reciever,amount,message, block.timestamp,keywords));
 
+    // actually make transaction
+    emit Transfer(msg.sender,reciever,amount,message, block.timestamp,keywords);
 
   }
 
